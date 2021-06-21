@@ -11,7 +11,9 @@ app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
 app.config["SQLALCHEMY_ECHO"] = True
 app.config["SECRET_KEY"] = os.environ.get("SECRET_KEY", "hellosecret1")
 print("#########################################")
-print(app.config["SECRET_KEY"])  # this should print hellosecret1 because we didn't set a secret key yet
+print(
+    app.config["SECRET_KEY"]
+)  # this should print hellosecret1 because we didn't set a secret key yet, but it's different on the heroku concole because we set that one
 print("#########################################")
 app.config["DEBUG_TB_INTERCEPT_REDIRECTS"] = False
 
